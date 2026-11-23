@@ -7,7 +7,7 @@ export const shared = {
   short: 'misha',
   contacts: {
     email: 'misha3001011@gmail.com',
-    telegram: 'https://t.me/your_username', // TODO: your Telegram
+    telegram: 'https://t.me/MishaPopovych',
     linkedin: 'https://www.linkedin.com/in/misha-popovych-0126b22a6/',
   },
   stack: {

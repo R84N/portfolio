@@ -14,7 +14,7 @@ export default defineNuxtConfig({
 
   // Ukrainian at "/", English at "/en". The page text itself lives in app/data/profile.ts.
   i18n: {
-    baseUrl: '', // TODO: set to your domain (e.g. 'https://misha.dev') for correct hreflang/og links
+    baseUrl: 'https://portfolio-iota-one-54.vercel.app', // change when you connect your own domain
     locales: [
       { code: 'uk', language: 'uk-UA', name: 'UA' },
       { code: 'en', language: 'en-US', name: 'EN' },

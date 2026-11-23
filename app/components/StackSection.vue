@@ -70,7 +70,12 @@ const all = Object.values(stack).flat()
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 @media (max-width: 900px) {
-  .groups { grid-template-columns: 1fr; }
+  .groups { grid-template-columns: 1fr; gap: 14px; margin-top: 32px; }
+}
+@media (max-width: 760px) {
+  .group { padding: 22px; }
+  .group ul { margin-top: 16px; gap: 7px; }
+  .marquee { margin-top: 56px; padding: 16px 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; }

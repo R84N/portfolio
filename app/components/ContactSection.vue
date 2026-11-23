@@ -80,6 +80,11 @@ const socials = [
   position: relative;
 }
 .socials a { color: var(--muted); transition: color 0.25s; }
+@media (max-width: 520px) {
+  .actions { flex-direction: column; gap: 10px; margin-top: 28px; }
+  .actions .btn { width: 100%; }
+  .socials { margin-top: 28px; }
+}
 .socials a span { display: inline-block; transition: transform 0.25s; color: var(--green); }
 .socials a:hover { color: var(--text); }
 .socials a:hover span { transform: translate(3px, -3px); }

@@ -118,8 +118,12 @@ onMounted(() => {
 
 @media (max-width: 800px) {
   .road { left: 9px; }
+  .steps { margin-top: 36px; }
   .step,
-  .step.right { width: 100%; margin-left: 0; padding: 0 0 36px 44px; justify-content: flex-start; }
+  .step.right { width: 100%; margin-left: 0; padding: 0 0 16px 36px; justify-content: flex-start; }
+  .step-body { padding: 20px; }
+  .step-body h3 { font-size: 20px; }
+  .dot { top: 24px; }
   .step + .step { margin-top: 0; }
   .left .dot,
   .right .dot { left: 0; right: auto; }

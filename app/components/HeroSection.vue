@@ -49,17 +49,18 @@ onMounted(() => {
           <i /><i /><i />
           <span>server/api/hire.post.ts</span>
         </div>
-        <pre><code><span class="code-line"><b class="k">import</b> { <b class="f">defineEventHandler</b> } <b class="k">from</b> <b class="s">'h3'</b></span>
+        <pre><code><span class="code-line"><b class="k">import</b> { <b class="f">readBody</b> } <b class="k">from</b> <b class="s">'h3'</b></span>
 <span class="code-line"> </span>
-<span class="code-line"><b class="k">export default</b> <b class="f">defineEventHandler</b>(<b class="k">async</b> (event) => {</span>
-<span class="code-line">  <b class="k">const</b> task = <b class="k">await</b> <b class="f">readBody</b>(event)</span>
+<span class="code-line"><b class="k">export default</b> <b class="f">defineEventHandler</b>(</span>
+<span class="code-line">  <b class="k">async</b> (event) => {</span>
+<span class="code-line">    <b class="k">const</b> task = <b class="k">await</b> <b class="f">readBody</b>(event)</span>
 <span class="code-line"> </span>
-<span class="code-line">  <b class="k">return</b> {</span>
-<span class="code-line">    frontend: [<b class="s">'vue'</b>, <b class="s">'nuxt'</b>, <b class="s">'pinia'</b>],</span>
-<span class="code-line">    backend:  [<b class="s">'node'</b>, <b class="s">'express'</b>, <b class="s">'prisma'</b>],</span>
-<span class="code-line">    status:   <b class="s">'ready to ship'</b> <b class="c">// ✓</b></span>
-<span class="code-line">  }</span>
-<span class="code-line">})</span></code></pre>
+<span class="code-line">    <b class="k">return</b> {</span>
+<span class="code-line">      vue:  [<b class="s">'nuxt'</b>, <b class="s">'pinia'</b>, <b class="s">'gsap'</b>],</span>
+<span class="code-line">      node: [<b class="s">'express'</b>, <b class="s">'prisma'</b>],</span>
+<span class="code-line">      status: <b class="s">'ready to ship'</b> <b class="c">// ✓</b></span>
+<span class="code-line">    }</span>
+<span class="code-line">  })</span></code></pre>
       </div>
     </div>
 
@@ -190,8 +191,17 @@ pre b { font-weight: 400; }
   .pillars { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
-  .hero { padding-top: 110px; gap: 50px; }
-  .hero-intro { font-size: 17px; }
+  .hero { padding: 104px 0 8px; gap: 44px; min-height: 0; }
+  .hero-grid { gap: 36px; }
+  .hero-title { margin-top: 14px; }
+  .hero-intro { font-size: 17px; margin-top: 20px; }
+  .hero-actions { margin-top: 28px; }
   pre { font-size: 12px; padding: 16px; }
+  .pillars { gap: 4px; }
+  .pillar { padding-top: 18px; padding-bottom: 14px; }
+}
+@media (max-width: 520px) {
+  .hero-actions { flex-direction: column; gap: 10px; }
+  .hero-actions .btn { width: 100%; }
 }
 </style>

@@ -133,4 +133,11 @@ function reset(e: MouseEvent) {
   .grid { grid-template-columns: 1fr; }
   .project h3 { margin-top: 26px; }
 }
+@media (max-width: 760px) {
+  .grid { margin-top: 32px; gap: 14px; }
+  .project { padding: 22px; }
+  .project h3 { font-size: 24px; margin-top: 20px; }
+  .project ul { margin-top: 18px; }
+  .more { margin-top: 18px; }
+}
 </style>

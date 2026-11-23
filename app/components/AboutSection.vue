@@ -43,10 +43,15 @@ const { c } = useContent()
 .fact dd { font-weight: 700; margin-top: 4px; }
 
 @media (max-width: 900px) {
-  .about { grid-template-columns: 1fr; gap: 30px; }
+  .about { grid-template-columns: 1fr; gap: 24px; }
   .about-body p { font-size: 17px; }
 }
-@media (max-width: 420px) {
+@media (max-width: 760px) {
+  .facts { gap: 10px; margin-top: 28px; }
+  .fact { padding: 14px 16px; }
+  .fact dd { font-size: 15px; line-height: 1.35; }
+}
+@media (max-width: 340px) {
   .facts { grid-template-columns: 1fr; }
 }
 </style>

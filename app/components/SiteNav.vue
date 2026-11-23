@@ -156,7 +156,8 @@ onMounted(() => {
     flex-direction: column;
     gap: 0;
     padding: 8px 16px 20px;
-    background: rgba(7, 9, 8, 0.92);
+    background: var(--bg);
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.8);
     border-bottom: 1px solid var(--line);
     font-size: 20px;
     color: var(--text);
