@@ -31,6 +31,9 @@ html {
     radial-gradient(900px 500px at -10% 110%, rgba(104, 160, 99, 0.08), transparent 60%),
     var(--bg);
   background-attachment: fixed;
+  /* safety net: nothing animating in from the side can widen the page on phones
+     (`clip`, unlike `hidden`, doesn't turn <html> into a scroll container) */
+  overflow-x: clip;
   color-scheme: dark;
   -webkit-text-size-adjust: 100%;
 }
@@ -46,6 +49,7 @@ body {
   font-size: 17px;
   line-height: 1.6;
   overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 

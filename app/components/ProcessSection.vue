@@ -16,6 +16,10 @@ onMounted(() => {
       ease: 'none',
       scrollTrigger: { trigger: '.steps', start: 'top 65%', end: 'bottom 60%', scrub: 1 },
     })
+    // In the single-column (mobile) layout every card is full width, so a sideways
+    // start offset would stick out of the screen and allow horizontal scrolling
+    // until the card is revealed. Slide up there instead.
+    const stacked = window.matchMedia('(max-width: 800px)').matches
     gsap.utils.toArray<HTMLElement>('.step').forEach((step) => {
       ScrollTrigger.create({
         trigger: step,
@@ -24,7 +28,7 @@ onMounted(() => {
         onLeaveBack: () => step.classList.remove('lit'),
       })
       gsap.from(step.querySelector('.step-body'), {
-        x: step.classList.contains('right') ? 60 : -60,
+        ...(stacked ? { y: 40 } : { x: step.classList.contains('right') ? 60 : -60 }),
         opacity: 0,
         duration: 1,
         ease: 'power3.out',
