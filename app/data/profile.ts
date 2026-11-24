@@ -4,7 +4,7 @@
  */
 
 export const shared = {
-  short: 'misha',
+  short: 'WebDev',
   contacts: {
     email: 'misha3001011@gmail.com',
     telegram: 'https://t.me/MishaPopovych',
